@@ -1,11 +1,10 @@
-import { Subheader } from "pages/Home/Subheader"
+import { Subheader } from "pages/Home/Subheader";
+import { MainLayout } from "pages/layout/MainLayout";
 export const HomePage = () => {
   return (
-    <main className="max-w-7xl mx-auto p-4">
-      <div className="w-full flex flex-col items-center justify-center gap-6">
-        <h1 className="text-center">Start your new great project</h1>
-        <Subheader />
-      </div>
-    </main>
-  )
-}
+    <MainLayout containerClassName="items-center justify-center">
+      <h1 className="text-center">Start your new great project</h1>
+      <Subheader />
+    </MainLayout>
+  );
+};
