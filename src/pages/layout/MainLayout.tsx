@@ -11,11 +11,11 @@ export const MainLayout = ({
   containerClassName,
 }: MainLayoutProps) => {
   const containerClass = twMerge(
-    "w-full flex flex-col gap-6",
+    "w-full h-full",
     containerClassName
   );
   return (
-    <main className="max-w-7xl flex flex-col mx-auto p-4">
+    <main className="max-w-7xl mx-auto p-4 h-screen">
       <TopNavbar />
       <div className={containerClass}>{children}</div>
     </main>
