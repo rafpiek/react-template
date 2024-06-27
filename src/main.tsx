@@ -7,6 +7,7 @@ import { DependenciesProvider } from 'infra/DependencyContainer.tsx'
 import { ThemeProvider } from 'components/ThemeProvider/ThemeProvider.tsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import "infra/i18n"
 
 const queryClient = new QueryClient()
 
