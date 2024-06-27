@@ -1,17 +1,13 @@
-import { Result } from "infra/Result"
-import { BrowserStorage } from "infra/storage/BrowserStorage.tsx";
-
-
+import { Result } from 'infra/Result'
+import { BrowserStorage } from 'infra/storage/BrowserStorage.tsx'
 
 export type AuthStatus = {
   isLoggedIn: boolean
   token?: string
 }
 
-
-
 export class AuthRepository {
-  static KEY = "auth"
+  static KEY = 'auth'
   private readonly storage: BrowserStorage
 
   constructor() {
@@ -29,5 +25,4 @@ export class AuthRepository {
 
     return Result.ok(data)
   }
-
 }

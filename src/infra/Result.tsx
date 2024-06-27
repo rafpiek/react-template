@@ -1,7 +1,7 @@
 export class Result<T> {
-  public readonly data: T;
+  public readonly data: T
 
-  private constructor(private readonly props: { value?: any, error?: any}) {
+  private constructor(private readonly props: { value?: any; error?: any }) {
     this.data = props.value
   }
 

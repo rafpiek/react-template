@@ -1,0 +1,6 @@
+components.json
+jest.*
+package.json
+postcss.config.js
+README.md
+src-tauri/*

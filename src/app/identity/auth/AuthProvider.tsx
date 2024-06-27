@@ -1,6 +1,6 @@
-import { PropsWithChildren, useEffect, createContext, useContext, useState } from "react"
-import { FakeUser, User } from "app/identity/FakeUser.ts";
-import { AuthRepository } from "./AuthRepository";
+import { PropsWithChildren, useEffect, createContext, useContext, useState } from 'react'
+import { FakeUser, User } from 'app/identity/FakeUser.ts'
+import { AuthRepository } from './AuthRepository'
 
 interface IAuthContext {
   isLoggedIn: boolean
@@ -17,7 +17,9 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
   const user = FakeUser.build()
   const authRepository = new AuthRepository()
 
-  useEffect(() => { checkAuth() }, [])
+  useEffect(() => {
+    checkAuth()
+  }, [])
 
   const login = async () => {
     setLoggedIn(true)
@@ -42,11 +44,7 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
     checkAuth
   }
 
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
-  )
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
 
 export const useAuth = () => {
