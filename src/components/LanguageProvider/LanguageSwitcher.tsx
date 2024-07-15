@@ -45,7 +45,11 @@ export const LanguageSwitcher = () => {
   }
 
   const currentFlag = useMemo(() => {
-    return LANGUAGES[language].flag
+    try {
+      return LANGUAGES[language].flag
+    } catch {
+      return LANGUAGES.en.flag
+    }
   }, [language])
 
   return (
