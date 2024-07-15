@@ -2,9 +2,13 @@ import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import CharacterCount from '@tiptap/extension-character-count'
 import Focus from '@tiptap/extension-focus'
-import { useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import Confetti from 'react-confetti'
+
+const TARGET_WORDS = 20
 
 export const SampleEditor = () => {
+  const [initialWordsCount, setInitialWordsCount] = useState(0)
   const editor = useEditor({
     content: '',
     extensions: [
@@ -24,8 +28,18 @@ export const SampleEditor = () => {
     if (editor) {
       const cachedContent = JSON.parse(localStorage.getItem('editor-content') || '')
       editor.commands.setContent(cachedContent || '')
+      setInitialWordsCount(editor.storage.characterCount.words())
     }
   }, [editor])
+
+  const wordsCount = editor?.storage.characterCount.words() || 0
+
+  const targetReached = useMemo(() => {
+    if (initialWordsCount === 0) return false
+    if (wordsCount > initialWordsCount && wordsCount >= TARGET_WORDS) {
+      return true
+    }
+  }, [wordsCount, initialWordsCount])
 
   return (
     <div className="prose dark:prose-invert mt-8 rounded-md bg-muted px-4 py-8">
@@ -38,6 +52,7 @@ export const SampleEditor = () => {
       <span className="text-white">
         {editor?.storage.characterCount.characters() || 0} characters
       </span>
+      {targetReached && <Confetti gravity={0.5} recycle={false} numberOfPieces={2000} />}
     </div>
   )
 }
