@@ -2,6 +2,7 @@ import { PropsWithChildren } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useAuth } from 'app/identity/auth/AuthProvider.tsx'
 import { ThemeToggle } from 'components/ThemeProvider/ThemeToggle.tsx'
+import { LanguageSwitcher } from 'components/LanguageProvider/LanguageSwitcher.tsx'
 
 export const TopNavbar = () => {
   const { isLoggedIn, logout, user } = useAuth()
@@ -20,7 +21,10 @@ export const TopNavbar = () => {
           </>
         ) : null}
       </div>
-      <ThemeToggle />
+      <div className="flex items-center gap-2">
+        <LanguageSwitcher />
+        <ThemeToggle />
+      </div>
     </nav>
   )
 }
@@ -35,8 +39,7 @@ const NavigationLink = ({ to, children }: NavigationLinkProps) => {
       className={({ isActive }) => {
         return [isActive ? 'font-bold text-sky-500 underline' : ''].join(' ')
       }}
-      to={to}
-    >
+      to={to}>
       {children}
     </NavLink>
   )
