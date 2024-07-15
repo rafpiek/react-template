@@ -22,5 +22,12 @@
     "confirmPassword": "Confirm password",
     "signUp": "Sign up",
     "alreadyHaveAccount": "Already have an account?"
+  },
+  "passwordlessLink": "Login with magic link",
+  "standardLogin": "Login with email and password",
+  "passwordless": {
+    "title": "Login with magic link",
+    "subtitle": "Enter your email below to receive a magic link.",
+    "submit": "Send magic link"
   }
 }

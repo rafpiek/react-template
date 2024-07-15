@@ -4,6 +4,7 @@ import { Button } from 'components/ui/button'
 import { useTransition } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ApiClient } from 'infra/http/ApiClient.ts'
+import { Env } from "infra/Env.ts"
 
 export const HomePage = () => {
   const { t } = useTranslation()
@@ -14,7 +15,7 @@ export const HomePage = () => {
       <p>{t('subtitle')}</p>
       <Subheader />
 
-      <p>{import.meta.env.VITE_API_URL}</p>
+      <p>{Env.API_URL}</p>
       <Button variant="default">Button</Button>
     </MainLayout>
   )

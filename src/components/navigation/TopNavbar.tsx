@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { useAuth } from 'app/identity/auth/AuthProvider.tsx'
 import { ThemeToggle } from 'components/ThemeProvider/ThemeToggle.tsx'
 import { LanguageSwitcher } from 'components/LanguageProvider/LanguageSwitcher.tsx'
-import { useTranslation } from "react-i18next"
+import { useTranslation } from 'react-i18next'
 
 export const TopNavbar = () => {
   const { isLoggedIn, logout, user } = useAuth()
@@ -21,7 +21,9 @@ export const TopNavbar = () => {
               Logged in as {user.email} {isLoggedIn.toString()}
             </span>
           </>
-        ) : null}
+        ) : (
+          <NavigationLink to="/login">{t('login.title')}</NavigationLink>
+        )}
       </div>
       <div className="flex items-center gap-2">
         <LanguageSwitcher />

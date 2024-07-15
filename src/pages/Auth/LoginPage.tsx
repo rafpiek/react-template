@@ -3,6 +3,7 @@ import { useAuth } from 'app/identity/auth/AuthProvider.tsx'
 import { LoginForm } from 'pages/Auth/LoginForm.tsx'
 import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { PasswordlessLink } from "pages/Auth/PasswordlessLink.tsx"
 
 export const LoginPage = () => {
   const { t } = useTranslation()

@@ -15,6 +15,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { LoginPayload, LoginSchema } from 'app/identity/auth/validations.ts'
 import { ErrorLabel } from 'components/ui/ErrorLabel.tsx'
 import { useTranslation } from 'react-i18next'
+import { PasswordlessLink } from 'pages/Auth/PasswordlessLink.tsx'
 
 export function LoginForm() {
   const { t } = useTranslation()
@@ -56,10 +57,11 @@ export function LoginForm() {
             <ErrorLabel error={errors.password} />
           </div>
         </CardContent>
-        <CardFooter>
+        <CardFooter className="flex flex-col gap-4">
           <Button className="w-full" type="submit">
             {t('login.signIn')}
           </Button>
+          <PasswordlessLink label={t('passwordlessLink')} />
         </CardFooter>
       </form>
     </Card>

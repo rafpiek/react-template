@@ -19,3 +19,7 @@ export const RegistrationSchema: ZodType<RegistrationPayload> = LoginSchema.exte
 }).refine((data: RegistrationPayload) => data.passwordConfirmation === data.password, {
   message: 'Passwords do not match'
 })
+
+export type PasswordlessPayload = Pick<LoginPayload, 'email'>
+
+export const PasswordlessSchema: ZodType<PasswordlessPayload> = LoginSchema.pick({ email: true })

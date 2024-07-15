@@ -14,6 +14,7 @@ import { RegistrationPayload, RegistrationSchema } from 'app/identity/auth/valid
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslation } from 'react-i18next'
+import { PasswordlessLink } from 'pages/Auth/PasswordlessLink.tsx'
 
 export const RegistrationForm = () => {
   const { t } = useTranslation()
@@ -57,10 +58,11 @@ export const RegistrationForm = () => {
             <ErrorLabel error={errors.passwordConfirmation} />
           </div>
         </CardContent>
-        <CardFooter>
+        <CardFooter className="flex flex-col gap-4">
           <Button className="w-full" type="submit">
             {t('registration.signUp')}
           </Button>
+          <PasswordlessLink label={t('passwordlessLink')} />
         </CardFooter>
       </form>
     </Card>
