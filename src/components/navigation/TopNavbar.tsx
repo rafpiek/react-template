@@ -14,6 +14,7 @@ export const TopNavbar = () => {
       <div className="flex flex-row items-center gap-4">
         <NavigationLink to="/">Home</NavigationLink>
         <NavigationLink to="/about">About</NavigationLink>
+        <NavigationLink to="/editor">Editor</NavigationLink>
         {isLoggedIn ? (
           <>
             <button onClick={logout}>{t('logout')}</button>

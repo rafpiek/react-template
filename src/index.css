@@ -3,6 +3,7 @@
 @import 'tailwindcss/utilities';
 
 @import './styles/typography/headings';
+@import './styles/editor';
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
