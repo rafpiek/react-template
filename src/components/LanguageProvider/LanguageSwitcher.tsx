@@ -15,7 +15,7 @@ const useLanguage = () => {
     i18n.changeLanguage(lang)
   }
 
-  const language = i18n.language as Language
+  const language = (i18n.language as Language) || Language.English
 
   return {
     language,
