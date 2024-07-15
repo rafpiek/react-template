@@ -3,6 +3,6 @@
 
 }
 
-.ProseMirror p {
+.ProseMirror > p {
   text-indent: 1.5rem;
 }
