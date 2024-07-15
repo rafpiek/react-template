@@ -1,4 +1,26 @@
 {
   "title": "This is my react template",
-  "subtitle": "And this is subtitle"
+  "subtitle": "And this is subtitle",
+  "email": "Email",
+  "password": "Password",
+  "passwordConfirmation": "Password confirmation",
+  "theme": {
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System"
+  },
+  "logout": "Logout",
+  "login": {
+    "title": "Login",
+    "subtitle": "Enter your email and password below to sign in.",
+    "signIn": "Sign in",
+    "dontHaveAccount": "Don't have an account?"
+  },
+  "registration": {
+    "title": "Sign up",
+    "subtitle": "Enter your email and password below to create an account.",
+    "confirmPassword": "Confirm password",
+    "signUp": "Sign up",
+    "alreadyHaveAccount": "Already have an account?"
+  }
 }

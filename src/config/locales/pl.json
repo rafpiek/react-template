@@ -1,4 +1,26 @@
 {
   "title": "To jest template react",
-  "subtitle": "To jest podtytuł"
+  "subtitle": "To jest podtytuł",
+  "email": "Email",
+  "password": "Hasło",
+  "passwordConfirmation": "Potwierdzenie hasła",
+  "theme": {
+    "dark": "Ciemny",
+    "light": "Jasny",
+    "system": "Systemowy"
+  },
+  "logout": "Wyloguj",
+  "login": {
+    "title": "Zaloguj się",
+    "subtitle": "Zaloguj się do swojego konta",
+    "signIn": "Zaloguj się",
+    "dontHaveAccount": "Nie masz konta?"
+  },
+  "registration": {
+    "title": "Zarejestruj się",
+    "subtitle": "Załóż konto i ciesz się wszystkimi funkcjami",
+    "confirmPassword": "Potwierdź hasło",
+    "signUp": "Zarejestruj się",
+    "alreadyHaveAccount": "Masz już konto?"
+  }
 }

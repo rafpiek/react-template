@@ -3,7 +3,7 @@ import { MainLayout } from 'pages/layout/MainLayout'
 import { Button } from 'components/ui/button'
 import { useTransition } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ApiClient } from "infra/http/ApiClient.ts"
+import { ApiClient } from 'infra/http/ApiClient.ts'
 
 export const HomePage = () => {
   const { t } = useTranslation()

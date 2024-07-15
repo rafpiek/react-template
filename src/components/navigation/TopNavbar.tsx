@@ -3,9 +3,11 @@ import { NavLink } from 'react-router-dom'
 import { useAuth } from 'app/identity/auth/AuthProvider.tsx'
 import { ThemeToggle } from 'components/ThemeProvider/ThemeToggle.tsx'
 import { LanguageSwitcher } from 'components/LanguageProvider/LanguageSwitcher.tsx'
+import { useTranslation } from "react-i18next"
 
 export const TopNavbar = () => {
   const { isLoggedIn, logout, user } = useAuth()
+  const { t } = useTranslation()
 
   return (
     <nav className="flex flex-row justify-between gap-4">
@@ -14,7 +16,7 @@ export const TopNavbar = () => {
         <NavigationLink to="/about">About</NavigationLink>
         {isLoggedIn ? (
           <>
-            <button onClick={logout}>Logout</button>
+            <button onClick={logout}>{t('logout')}</button>
             <span>
               Logged in as {user.email} {isLoggedIn.toString()}
             </span>

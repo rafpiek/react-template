@@ -1,4 +1,3 @@
-import { Button } from 'components/ui/button'
 import {
   Card,
   CardContent,
@@ -6,38 +5,35 @@ import {
   CardFooter,
   CardHeader,
   CardTitle
-} from 'components/ui/card'
-import { Input } from 'components/ui/input'
-import { Label } from 'components/ui/label'
-import { useAuth } from 'app/identity/auth/AuthProvider.tsx'
+} from 'components/ui/card.tsx'
+import { Label } from 'components/ui/label.tsx'
+import { Input } from 'components/ui/input.tsx'
+import { ErrorLabel } from 'components/ui/ErrorLabel.tsx'
+import { Button } from 'components/ui/button.tsx'
+import { RegistrationPayload, RegistrationSchema } from 'app/identity/auth/validations.ts'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { LoginPayload, LoginSchema } from 'app/identity/auth/validations.ts'
-import { ErrorLabel } from 'components/ui/ErrorLabel.tsx'
 import { useTranslation } from 'react-i18next'
 
-export function LoginForm() {
+export const RegistrationForm = () => {
   const { t } = useTranslation()
-  const { login } = useAuth()
-
   const {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<LoginPayload>({ resolver: zodResolver(LoginSchema) })
+  } = useForm<RegistrationPayload>({ resolver: zodResolver(RegistrationSchema) })
 
-  const onLogin = (data: LoginPayload) => {
+  const onRegister = (data: RegistrationPayload) => {
     console.log({ data })
-    login()
   }
 
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle className="text-2xl">Login</CardTitle>
-        <CardDescription>{t('login.subtitle')}</CardDescription>
+        <CardTitle className="text-2xl">{t('registration.title')}</CardTitle>
+        <CardDescription>{t('registration.subtitle')}</CardDescription>
       </CardHeader>
-      <form onSubmit={handleSubmit(onLogin)}>
+      <form onSubmit={handleSubmit(onRegister)}>
         <CardContent className="grid gap-4">
           <div className="grid gap-2">
             <Label htmlFor="email">{t('email')}</Label>
@@ -55,10 +51,15 @@ export function LoginForm() {
             <Input id="password" type="password" required {...register('password')} />
             <ErrorLabel error={errors.password} />
           </div>
+          <div className="grid gap-2">
+            <Label htmlFor="passwordConfirmation">{t('registration.confirmPassword')}</Label>
+            <Input id="password" type="password" required {...register('passwordConfirmation')} />
+            <ErrorLabel error={errors.passwordConfirmation} />
+          </div>
         </CardContent>
         <CardFooter>
           <Button className="w-full" type="submit">
-            {t('login.signIn')}
+            {t('registration.signUp')}
           </Button>
         </CardFooter>
       </form>
