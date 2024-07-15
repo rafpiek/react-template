@@ -4,6 +4,7 @@ import Backend from 'i18next-http-backend'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import en from '@/config/locales/en.json'
 import pl from '@/config/locales/pl.json'
+import fr from '@/config/locales/fr.json'
 
 i18n
   .use(Backend)
@@ -17,6 +18,9 @@ i18n
       },
       pl: {
         translation: pl
+      },
+      fr: {
+        translation: fr
       }
     },
     debug: true,

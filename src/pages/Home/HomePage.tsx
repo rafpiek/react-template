@@ -10,9 +10,7 @@ export const HomePage = () => {
     <MainLayout containerClassName="items-center justify-center">
       <h1 className="text-center">Start your new great project</h1>
       <h1 className="text-center">{t('title')}</h1>
-      <p>{t('subtitle')}</p>
       <Subheader />
-
       <p>{Env.API_URL}</p>
       <Button variant="default">Button</Button>
     </MainLayout>

@@ -1,3 +1,6 @@
+import { useTranslation } from 'react-i18next'
+
 export const Subheader = () => {
-  return <h2>This is beginning of great future</h2>
+  const { t } = useTranslation()
+  return <h2>{t('subtitle')}</h2>
 }

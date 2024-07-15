@@ -25,7 +25,8 @@ const useLanguage = () => {
 
 enum Language {
   English = 'en',
-  Polish = 'pl'
+  Polish = 'pl',
+  French = 'fr'
 }
 
 export const LanguageSwitcher = () => {
@@ -39,9 +40,14 @@ export const LanguageSwitcher = () => {
     switchLanguage(Language.Polish)
   }
 
+  const switchToFrench = () => {
+    switchLanguage(Language.French)
+  }
+
   const LANGUAGES = {
     en: { flag: '🇬🇧', name: 'English', toggle: switchToEnglish },
-    pl: { flag: '🇵🇱', name: 'Polski', toggle: switchToPolish }
+    pl: { flag: '🇵🇱', name: 'Polski', toggle: switchToPolish },
+    fr: { flag: '🇫🇷', name: 'Français', toggle: switchToFrench }
   }
 
   const currentFlag = useMemo(() => {

@@ -1,0 +1,33 @@
+{
+  "title": "Ceci est mon modèle react",
+  "subtitle": "Et ceci est un sous-titre",
+  "email": "E-mail",
+  "password": "Mot de passe",
+  "passwordConfirmation": "Confirmation du mot de passe",
+  "theme": {
+    "dark": "Sombre",
+    "light": "Clair",
+    "system": "Système"
+  },
+  "logout": "Déconnexion",
+  "login": {
+    "title": "Connexion",
+    "subtitle": "Entrez votre e-mail et mot de passe ci-dessous pour vous connecter.",
+    "signIn": "Se connecter",
+    "dontHaveAccount": "Vous n'avez pas de compte ?"
+  },
+  "registration": {
+    "title": "Inscription",
+    "subtitle": "Entrez votre e-mail et mot de passe ci-dessous pour créer un compte.",
+    "confirmPassword": "Confirmer le mot de passe",
+    "signUp": "S'inscrire",
+    "alreadyHaveAccount": "Vous avez déjà un compte ?"
+  },
+  "passwordlessLink": "Connexion avec lien magique",
+  "standardLogin": "Connexion avec e-mail et mot de passe",
+  "passwordless": {
+    "title": "Connexion avec lien magique",
+    "subtitle": "Entrez votre e-mail ci-dessous pour recevoir un lien magique.",
+    "submit": "Envoyer le lien magique"
+  }
+}
