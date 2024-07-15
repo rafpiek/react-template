@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react'
-import { Env } from "infra/Env.ts"
+import { Env } from '@/infra/Env.ts'
 
 type Theme = 'dark' | 'light' | 'system'
 

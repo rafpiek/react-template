@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useAuth } from 'app/identity/auth/AuthProvider.tsx'
-import { ThemeToggle } from 'components/ThemeProvider/ThemeToggle.tsx'
-import { LanguageSwitcher } from 'components/LanguageProvider/LanguageSwitcher.tsx'
+import { useAuth } from '@/app/identity/auth/AuthProvider.tsx'
+import { ThemeToggle } from '@/components/ThemeProvider/ThemeToggle.tsx'
+import { LanguageSwitcher } from '@/components/LanguageProvider/LanguageSwitcher.tsx'
 import { useTranslation } from 'react-i18next'
 
 export const TopNavbar = () => {

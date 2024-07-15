@@ -1,5 +1,5 @@
-import { Result } from 'infra/Result'
-import { BrowserStorage } from 'infra/storage/BrowserStorage.tsx'
+import { Result } from '@/infra/Result'
+import { BrowserStorage } from '@/infra/storage/BrowserStorage.tsx'
 
 export type AuthStatus = {
   isLoggedIn: boolean

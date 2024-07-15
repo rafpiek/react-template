@@ -1,10 +1,8 @@
-import { Subheader } from 'pages/Home/Subheader'
-import { MainLayout } from 'pages/layout/MainLayout'
-import { Button } from 'components/ui/button'
-import { useTransition } from 'react'
+import { Subheader } from '@/pages/Home/Subheader'
+import { MainLayout } from '@/pages/layout/MainLayout'
+import { Button } from '@/components/ui/button'
 import { useTranslation } from 'react-i18next'
-import { ApiClient } from 'infra/http/ApiClient.ts'
-import { Env } from "infra/Env.ts"
+import { Env } from '@/infra/Env.ts'
 
 export const HomePage = () => {
   const { t } = useTranslation()

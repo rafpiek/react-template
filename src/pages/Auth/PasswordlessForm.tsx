@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { useAuth } from 'app/identity/auth/AuthProvider.tsx'
+import { useAuth } from '@/app/identity/auth/AuthProvider.tsx'
 import {
   Card,
   CardContent,
@@ -7,14 +7,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle
-} from 'components/ui/card.tsx'
-import { PasswordlessSchema, PasswordlessPayload } from 'app/identity/auth/validations.ts'
+} from '@/components/ui/card.tsx'
+import { PasswordlessSchema, PasswordlessPayload } from '@/app/identity/auth/validations.ts'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { Label } from 'components/ui/label.tsx'
-import { Input } from 'components/ui/input.tsx'
-import { ErrorLabel } from 'components/ui/ErrorLabel.tsx'
-import { Button } from 'components/ui/button.tsx'
+import { Label } from '@/components/ui/label.tsx'
+import { Input } from '@/components/ui/input.tsx'
+import { ErrorLabel } from '@/components/ui/ErrorLabel.tsx'
+import { Button } from '@/components/ui/button.tsx'
 
 export const PasswordlessForm = () => {
   const { t } = useTranslation()

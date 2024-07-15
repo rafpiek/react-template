@@ -1,5 +1,5 @@
 import { PropsWithChildren, useEffect } from 'react'
-import { useAuth } from 'app/identity/auth/AuthProvider.tsx'
+import { useAuth } from '@/app/identity/auth/AuthProvider.tsx'
 import { useNavigate } from 'react-router-dom'
 
 interface ProtectedRouteProps extends PropsWithChildren<{}> {}

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Button } from 'components/ui/button.tsx'
+import { Button } from '@/components/ui/button.tsx'
 
 interface PasswordlessLinkProps {
   label: string

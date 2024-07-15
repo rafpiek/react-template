@@ -1,11 +1,11 @@
-import { AboutPage } from 'pages/About/AboutPage'
-import { HomePage } from 'pages/Home/HomePage'
+import { AboutPage } from '@/pages/About/AboutPage'
+import { HomePage } from '@/pages/Home/HomePage'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { NotFoundPage } from 'pages/NotFound/NotFoundPage.tsx'
-import { LoginPage } from 'pages/Auth/LoginPage.tsx'
-import { withGuard } from 'router/ProtectedRoute.tsx'
-import { RegistrationPage } from 'pages/Auth/RegistrationPage.tsx'
-import { PasswordlessPage } from 'pages/Auth/PasswordlessPage.tsx'
+import { NotFoundPage } from '@/pages/NotFound/NotFoundPage.tsx'
+import { LoginPage } from '@/pages/Auth/LoginPage.tsx'
+import { withGuard } from '@/router/ProtectedRoute.tsx'
+import { RegistrationPage } from '@/pages/Auth/RegistrationPage.tsx'
+import { PasswordlessPage } from '@/pages/Auth/PasswordlessPage.tsx'
 
 const router = createBrowserRouter([
   { path: '/', element: <HomePage /> },

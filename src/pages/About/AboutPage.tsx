@@ -1,4 +1,4 @@
-import { MainLayout } from 'pages/layout/MainLayout'
+import { MainLayout } from '@/pages/layout/MainLayout'
 
 export const AboutPage = () => {
   return (

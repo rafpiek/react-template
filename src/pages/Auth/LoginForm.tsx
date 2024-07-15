@@ -1,4 +1,4 @@
-import { Button } from 'components/ui/button'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -6,16 +6,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle
-} from 'components/ui/card'
-import { Input } from 'components/ui/input'
-import { Label } from 'components/ui/label'
-import { useAuth } from 'app/identity/auth/AuthProvider.tsx'
+} from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { useAuth } from '@/app/identity/auth/AuthProvider.tsx'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { LoginPayload, LoginSchema } from 'app/identity/auth/validations.ts'
-import { ErrorLabel } from 'components/ui/ErrorLabel.tsx'
+import { LoginPayload, LoginSchema } from '@/app/identity/auth/validations.ts'
+import { ErrorLabel } from '@/components/ui/ErrorLabel.tsx'
 import { useTranslation } from 'react-i18next'
-import { PasswordlessLink } from 'pages/Auth/PasswordlessLink.tsx'
+import { PasswordlessLink } from '@/pages/Auth/PasswordlessLink.tsx'
 
 export function LoginForm() {
   const { t } = useTranslation()

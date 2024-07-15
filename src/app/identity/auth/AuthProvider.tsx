@@ -1,7 +1,7 @@
 import { PropsWithChildren, useEffect, createContext, useContext, useState } from 'react'
-import { FakeUser, User } from 'app/identity/FakeUser.ts'
+import { FakeUser, User } from '@/app/identity/FakeUser.ts'
 import { AuthRepository, AuthStatus } from './AuthRepository'
-import { Result } from 'infra/Result.tsx'
+import { Result } from '@/infra/Result.tsx'
 
 interface IAuthContext {
   isLoggedIn: boolean

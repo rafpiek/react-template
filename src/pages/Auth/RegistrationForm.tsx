@@ -5,16 +5,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle
-} from 'components/ui/card.tsx'
-import { Label } from 'components/ui/label.tsx'
-import { Input } from 'components/ui/input.tsx'
-import { ErrorLabel } from 'components/ui/ErrorLabel.tsx'
-import { Button } from 'components/ui/button.tsx'
-import { RegistrationPayload, RegistrationSchema } from 'app/identity/auth/validations.ts'
+} from '@/components/ui/card.tsx'
+import { Label } from '@/components/ui/label.tsx'
+import { Input } from '@/components/ui/input.tsx'
+import { ErrorLabel } from '@/components/ui/ErrorLabel.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { RegistrationPayload, RegistrationSchema } from '@/app/identity/auth/validations.ts'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslation } from 'react-i18next'
-import { PasswordlessLink } from 'pages/Auth/PasswordlessLink.tsx'
+import { PasswordlessLink } from '@/pages/Auth/PasswordlessLink.tsx'
 
 export const RegistrationForm = () => {
   const { t } = useTranslation()

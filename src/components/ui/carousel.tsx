@@ -115,16 +115,14 @@ const Carousel = React.forwardRef<
         scrollNext,
         canScrollPrev,
         canScrollNext
-      }}
-    >
+      }}>
       <div
         ref={ref}
         onKeyDownCapture={handleKeyDown}
         className={cn('relative', className)}
         role="region"
         aria-roledescription="carousel"
-        {...props}
-      >
+        {...props}>
         {children}
       </div>
     </CarouselContext.Provider>
@@ -192,8 +190,7 @@ const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProp
         )}
         disabled={!canScrollPrev}
         onClick={scrollPrev}
-        {...props}
-      >
+        {...props}>
         <ArrowLeft className="h-4 w-4" />
         <span className="sr-only">Previous slide</span>
       </Button>
@@ -220,8 +217,7 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<ty
         )}
         disabled={!canScrollNext}
         onClick={scrollNext}
-        {...props}
-      >
+        {...props}>
         <ArrowRight className="h-4 w-4" />
         <span className="sr-only">Next slide</span>
       </Button>

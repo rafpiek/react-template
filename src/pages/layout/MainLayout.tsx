@@ -1,4 +1,4 @@
-import { TopNavbar } from 'components/navigation/TopNavbar'
+import { TopNavbar } from '@/components/navigation/TopNavbar'
 import { PropsWithChildren } from 'react'
 import { twMerge } from 'tailwind-merge'
 

@@ -1,7 +1,7 @@
-import { RegistrationForm } from 'pages/Auth/RegistrationForm.tsx'
-import { MainLayout } from 'pages/layout/MainLayout.tsx'
+import { RegistrationForm } from '@/pages/Auth/RegistrationForm.tsx'
+import { MainLayout } from '@/pages/layout/MainLayout.tsx'
 import { Link, useNavigate } from 'react-router-dom'
-import { useAuth } from 'app/identity/auth/AuthProvider.tsx'
+import { useAuth } from '@/app/identity/auth/AuthProvider.tsx'
 import { useTranslation } from 'react-i18next'
 
 export const RegistrationPage = () => {

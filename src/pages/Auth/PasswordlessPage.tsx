@@ -1,8 +1,8 @@
-import { MainLayout } from 'pages/layout/MainLayout.tsx'
+import { MainLayout } from '@/pages/layout/MainLayout.tsx'
 import { useTranslation } from 'react-i18next'
-import { useAuth } from 'app/identity/auth/AuthProvider.tsx'
+import { useAuth } from '@/app/identity/auth/AuthProvider.tsx'
 import { Link, useNavigate } from 'react-router-dom'
-import { PasswordlessForm } from 'pages/Auth/PasswordlessForm.tsx'
+import { PasswordlessForm } from '@/pages/Auth/PasswordlessForm.tsx'
 
 export const PasswordlessPage = () => {
   const { t } = useTranslation()

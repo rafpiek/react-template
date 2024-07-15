@@ -1,10 +1,10 @@
-import { Button } from 'components/ui/button'
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
-} from 'components/ui/dropdown-menu'
+} from '@/components/ui/dropdown-menu'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -15,7 +15,7 @@ const useLanguage = () => {
     i18n.changeLanguage(lang)
   }
 
-  const language = (i18n.language as Language) || Language.English
+  const language = i18n.language === 'null' ? Language.English : (i18n.language as Language)
 
   return {
     language,
